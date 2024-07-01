@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DeviceDetails = $_POST['DeviceDetails'];
 
 
-    $sql = "INSERT INTO IT_Devices (DeviceName, Serialnumber, Destination, Cleared, Tags, RoomNum, Details) VALUES ($DeviceName, $DeviceSerialnumber, $DeviceDestination, $DeviceCleared, $DeviceTags, $DeviceRoomNum, $DeviceDetails)";
+    $sql = "INSERT INTO `IT_Devices` (DeviceName, Serialnumber, Destination, Cleared, Tags, RoomNum, Details) VALUES ($DeviceName, $DeviceSerialnumber, $DeviceDestination, $DeviceCleared, $DeviceTags, $DeviceRoomNum, $DeviceDetails)";
     if ($conn->query($sql) === TRUE) {
         echo "New device record created successfully<br>";
     } else {
