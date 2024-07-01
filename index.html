@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Insert Data into Oulu Database</h1>
+    <form action="insert.php" method="post">
+        <h2>Furniture</h2>
+        <label for="furnitureName">Furniture Name:</label>
+        <input type="text" id="furnitureName" name="furnitureName" required>
+        <label for="furnitureRoomID">Room ID:</label>
+        <input type="number" id="furnitureRoomID" name="furnitureRoomID" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="insert.php" method="post">
+        <h2>Devices</h2>
+        <label for="DeviceName">Device Name:</label>
+        <input type="text" id="DeviceName" name="DeviceName" required>
+        <label for="DeviceRoomNum">Room ID:</label>
+        <input type="number" id="DeviceRoomNum" name="DeviceRoomNum" required>
+        <label for="DeviceSerialnumber">Serialnumber:</label>
+        <input type="number" id="DeviceSerialnumber" name="DeviceSerialnumber" required>
+        <label for="DeviceDestination">Destination:</label>
+        <input type="text" id="DeviceDestination" name="DeviceDestination" required>
+        <label for="DeviceDetails">Details:</label>
+        <input type="text" id="DeviceDetails" name="DeviceDetails" required>
+        <label for="DeviceTags">Details:</label>
+        <input type="infoText" id="DeviceTags" name="DeviceTags">
+
+        <input type="checkbox" id="Cleared" name="Cleared" value="1"> Pakattu
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
