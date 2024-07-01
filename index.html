@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Insert Data into Oulu Database</h1>
-    <form action="insert.php" method="post">
+    <!-- <form action="insert.php" method="post">
         <h2>Furniture</h2>
         <label for="furnitureName">Furniture Name:</label>
         <input type="text" id="furnitureName" name="furnitureName" required>
@@ -16,7 +16,7 @@
         <input type="number" id="furnitureRoomID" name="furnitureRoomID" required>
 
         <input type="submit" value="Submit">
-    </form>
+    </form> -->
 
     <form action="insert.php" method="post">
         <h2>Devices</h2>
@@ -28,10 +28,10 @@
         <input type="number" id="DeviceSerialnumber" name="DeviceSerialnumber" required>
         <label for="DeviceDestination">Destination:</label>
         <input type="text" id="DeviceDestination" name="DeviceDestination" required>
+        <label for="DeviceTags">Tags:</label>
+        <input type="infoText" id="DeviceTags" name="DeviceTags">
         <label for="DeviceDetails">Details:</label>
         <input type="text" id="DeviceDetails" name="DeviceDetails" required>
-        <label for="DeviceTags">Details:</label>
-        <input type="infoText" id="DeviceTags" name="DeviceTags">
 
         <input type="checkbox" id="Cleared" name="Cleared" value="1"> Pakattu
         

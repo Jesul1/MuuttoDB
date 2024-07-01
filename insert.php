@@ -1,5 +1,5 @@
 <?php
-$servername = "10.10.101.15";
+$servername = "localhost";
 $username = "input";  // Use your database username
 $password = "Kaut321!";      // Use your database password
 $dbname = "BusinessOulu";
@@ -13,16 +13,16 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Insert furniture data
-    $furnitureName = $_POST['furnitureName'];
-    $furnitureRoomID = $_POST['furnitureRoomID'];
+    // // Insert furniture data
+    // $furnitureName = $_POST['furnitureName'];
+    // $furnitureRoomID = $_POST['furnitureRoomID'];
 
-    $sql = "INSERT INTO Furniture (Name, RoomID) VALUES ('$furnitureName', $furnitureRoomID)";
-    if ($conn->query($sql) === TRUE) {
-        echo "New furniture record created successfully<br>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+    // $sql = "INSERT INTO Furniture (Name, RoomID) VALUES ('$furnitureName', $furnitureRoomID)";
+    // if ($conn->query($sql) === TRUE) {
+    //     echo "New furniture record created successfully<br>";
+    // } else {
+    //     echo "Error: " . $sql . "<br>" . $conn->error;
+    // }
 
     // Insert device data
     $DeviceName = $_POST['DeviceName'];
