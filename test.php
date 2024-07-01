@@ -6,7 +6,7 @@ $password = "Kaut321!";
 $dbname = "BusinessOulu";
 
 // Error log file path
-$log_file = '/var/www/html/logfile.log';
+$log_file = 'logfile.log';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,14 +17,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// // Prepare and bind
-// $stmt = $conn->prepare("INSERT INTO IT_Devices (DeviceName, Serialnumber, Destination, Tags, Cleared, RoomNum, Details) VALUES (?, ?, ?, ?, ?, ?, ?)");
-// if (!$stmt) {
-//     error_log("Prepare failed: " . $conn->error, 3, $log_file);
-//     die("Prepare failed: " . $conn->error);
-// }
-
-// $stmt->bind_param("sisii", $deviceName, $deviceSerialnumber, $deviceDestination, $deviceCleared, $DeviceTags, $deviceRoomNum, $DeviceDetails);
 
 // // Sample data
 // $DeviceName = "Gaming123";
@@ -61,13 +53,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DeviceDetails = "Epic Thingy"
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO IT_Devices (DeviceName, DeviceSerialnumber, DeviceDestination, DeviceCleared, DeviceRoomNum) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO IT_Devices (DeviceName, Serialnumber, Destination, Tags, Cleared, RoomNum, Details) VALUES (?, ?, ?, ?, ?, ?, ?)");
     if (!$stmt) {
         error_log("Prepare failed: " . $conn->error, 3, $log_file);
         die("Prepare failed: " . $conn->error);
     }
 
-    $stmt->bind_param("sisii", $deviceName, $deviceSerialnumber, $deviceDestination, $deviceCleared, $deviceRoomNum);
+    $stmt->bind_param("sisii", $deviceName, $deviceSerialnumber, $deviceDestination, $deviceCleared, $DeviceTags, $deviceRoomNum, $DeviceDetails);
 
     // Execute the statement
     if ($stmt->execute()) {
